@@ -22,10 +22,10 @@
   *{box-sizing:border-box}
   body{margin:0;min-height:100vh;background:radial-gradient(circle at top,#eef3ec 0%,var(--bg) 44%,#d7e0d5 100%);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);display:flex;justify-content:center;align-items:flex-start;padding:38px 14px;}
   .phone{width:min(430px,100%);background:var(--phone);border-radius:44px;box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(38,55,44,.08);position:relative;}
-  .notch{width:145px;height:28px;background:#090909;border-radius:0 0 18px 18px;margin:0 auto;}
-  .status{height:24px;display:flex;justify-content:space-between;align-items:center;padding:0 28px 0 30px;font-size:14px;font-weight:700;letter-spacing:.02em;margin-top:-22px;pointer-events:none;}
+  .notch{display:none;}
+  .status{display:none;}
   .signal{font-size:13px;opacity:.9;letter-spacing:1px}
-  main{padding:74px 24px 32px;}
+  main{padding:42px 24px 32px;}
   .logoMark{width:44px;height:32px;margin:0 auto 8px;display:grid;place-items:center;color:var(--deep);font-size:28px;line-height:1;}
   .brand{display:flex;align-items:center;justify-content:center;gap:5px;color:var(--orange);font-weight:900;letter-spacing:.01em;margin-bottom:18px;}\n  .brandLogo{gap:2px;}\n  .brandLogo .holy{font-family:Georgia,serif;font-style:italic;color:#db6014;font-size:26px;font-weight:700;letter-spacing:-.04em;}\n  .brandLogo .make{color:#ff863b;font-size:26px;font-weight:900;letter-spacing:-.05em;margin-left:-3px;}\n  .brandLogo .zh{color:#db6014;font-size:14px;font-weight:900;margin-left:6px;}
   h1{font-size:29px;line-height:1.18;text-align:center;margin:0 0 12px;letter-spacing:-.04em;color:var(--deep);}
@@ -104,18 +104,26 @@
   .mapItem{background:#fffdf8;border:1px solid #eee2d6;border-radius:16px;padding:11px 12px;font-size:13px;line-height:1.55;color:#5b685d;}
   .mapItem b{display:block;color:var(--orange);margin-bottom:3px;}
 
+
+  .panelClose{display:flex;align-items:center;justify-content:center;width:100%;border:none;background:#f3eee6;color:#6f5a48;border-radius:16px;padding:11px 12px;margin:16px 0 0;font-size:13px;font-weight:900;cursor:pointer;}
+  .panelClose:before{content:"↑";margin-right:6px;color:var(--orange);font-weight:900;}
+  .downloadImgBtn{display:flex;align-items:center;justify-content:center;text-decoration:none;background:var(--orange);color:#fff;border-radius:18px;padding:12px 14px;font-size:14px;font-weight:900;margin:10px 0 14px;box-shadow:0 6px 14px rgba(219,96,20,.16);}
+
   .cta{display:block;text-decoration:none;text-align:center;background:var(--green);color:white;border-radius:22px;padding:15px 14px;font-size:16px;font-weight:900;margin:20px 0 10px;box-shadow:0 8px 16px rgba(111,147,110,.2);}
   .footerNote{text-align:center;color:#788277;font-size:12px;line-height:1.7;padding:10px 18px 20px;}
-  .bottomBar{width:130px;height:5px;border-radius:10px;background:#a7a7a2;margin:6px auto 18px;}
+  .bottomBar{display:none;}
   @media (max-width:380px){main{padding-left:18px;padding-right:18px}.panel{padding-left:18px}summary{font-size:15px}.icon{display:none}.quick{grid-template-columns:1fr}}
+
+  .logoBrandManual{margin-bottom:18px;}
+  .topLogoManual{display:block;width:245px;max-width:82%;height:auto;margin:0 auto;}
+  .logoManualIg{width:74px;height:42px;border-radius:12px;background:#fff7ef;border:1px solid #f0c3a6;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:4px;flex:0 0 auto;}
+  .logoManualIg img{display:block;width:66px;height:auto;object-fit:contain;}
+
 </style>
 </head>
 <body>
   <section class="phone">
-    <div class="notch"></div>
-    <div class="status"><span>7:24</span><span class="signal">▮▮▮  Wi‑Fi  ▰</span></div>
     <main>
-      <div class="logoMark">✦</div>
       <div class="brand brandLogo"><span class="holy">Holy</span><span class="make">make</span><span class="zh">吼莉內容行銷</span></div>
       <h1>把社群貼文<br>變成自然聊天的開門磚</h1>
       <p class="subtitle">月會分享用｜一起看看 Holymake 的 IG 內容，如何成為和店家開話題、拉近關係、延伸需求的小幫手。</p>
@@ -139,6 +147,7 @@
             <p>Holymake 是從 RENATA 蕾娜塔髮品旗下的「短影音與社群內容規劃製作」延伸出來的社群內容服務。</p>
             <div class="block"><h3>不是另外多一個帳號而已</h3><p>它是幫業務、髮廊客戶、想經營社群的人，提供更低門檻的內容靈感與品牌經營方向。</p></div>
             <div class="valueGrid"><div class="value"><b>對業務的價值</b><span>多一個能與店家討論社群、銷售、品牌形象的切入點。</span></div><div class="value"><b>對店家的價值</b><span>不用再從零想主題，能看見「自己的日常也能變內容」。</span></div></div>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
 
@@ -149,6 +158,7 @@
             <p>每篇貼文可以這樣輕鬆運用：先丟一個客戶可能有感的觀察，再接一句「你們店裡會不會也遇到？」</p>
             <div class="script">老師，這篇我覺得你們店也會用得到。不是叫你現在一定要拍影片，而是你可以先看看，這個主題其實很適合拿來跟客人溝通。</div>
             <div class="block"><h3>可以參考的三個小步驟</h3><p>先分享貼文 → 輕輕問店家有沒有遇到 → 如果對方有興趣，再延伸到社群內容、短影音或活動規劃。</p></div>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
       </div>
@@ -193,6 +203,7 @@
               <div class="mapItem"><b>對短影音效果還在觀望</b>可以接「個案紀錄」，用實際案例降低不安。</div>
               <div class="mapItem"><b>想做活動或跟上話題</b>可以接「時事分享」，延伸到當月銷售活動與短影音內容規劃。</div>
             </div>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
       </div>
@@ -208,7 +219,7 @@
               <span class="previewLabel">IG 貼文預覽卡</span>
               <div class="igMockCard">
                 <div class="igTop">
-                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igAvatarLogo logoManualIg"><img src="images/holymake-logo-manual-compact.png" alt="Holymake"></div>
                   <div class="igMeta">
                     <div class="igName">Holymake 吼莉內容行銷</div>
                     <div class="igSub">品牌介紹｜貼文範例</div>
@@ -229,6 +240,7 @@
               <div class="value"><b>可以帶給業務什麼？</b><span>把銷售對話從「產品」升級到「店家經營」。</span></div>
               <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>社群健檢、短影音服務說明、店家內容規劃。</span></div>
             </div>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
 
@@ -240,7 +252,7 @@
               <span class="previewLabel">IG 貼文預覽卡</span>
               <div class="igMockCard">
                 <div class="igTop">
-                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igAvatarLogo logoManualIg"><img src="images/holymake-logo-manual-compact.png" alt="Holymake"></div>
                   <div class="igMeta">
                     <div class="igName">Holymake 吼莉內容行銷</div>
                     <div class="igSub">AI 運用｜貼文範例</div>
@@ -261,6 +273,7 @@
               <div class="value"><b>可以帶給業務什麼？</b><span>用輕鬆、熱門、低門檻的工具打開話題。</span></div>
               <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>AI 指令包、LINE@ 導流、AI 主題短影音規劃、運用 AI 做售後服務、髮型溝通「輔助」。</span></div>
             </div>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
 
@@ -272,7 +285,7 @@
               <span class="previewLabel">IG 貼文預覽卡</span>
               <div class="igMockCard">
                 <div class="igTop">
-                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igAvatarLogo logoManualIg"><img src="images/holymake-logo-manual-compact.png" alt="Holymake"></div>
                   <div class="igMeta">
                     <div class="igName">Holymake 吼莉內容行銷</div>
                     <div class="igSub">發文注意事項｜貼文範例</div>
@@ -293,6 +306,7 @@
               <div class="value"><b>可以帶給業務什麼？</b><span>讓業務不只是介紹產品，也能用提醒風險的方式建立信任感。</span></div>
               <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>一條龍短影音、社群內容製作、廣告前內容檢查。</span></div>
             </div>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
 
@@ -304,7 +318,7 @@
               <span class="previewLabel">IG 貼文預覽卡</span>
               <div class="igMockCard">
                 <div class="igTop">
-                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igAvatarLogo logoManualIg"><img src="images/holymake-logo-manual-compact.png" alt="Holymake"></div>
                   <div class="igMeta">
                     <div class="igName">Holymake 吼莉內容行銷</div>
                     <div class="igSub">主題規劃｜貼文範例</div>
@@ -325,6 +339,7 @@
               <div class="value"><b>可以帶給業務什麼？</b><span>很適合從自然聊天，延伸到店家的內容規劃需求。</span></div>
               <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>當月內容企劃、檔期產品銷售活動、專屬主題月曆。</span></div>
             </div>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
 
@@ -336,7 +351,7 @@
               <span class="previewLabel">IG 貼文預覽卡</span>
               <div class="igMockCard">
                 <div class="igTop">
-                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igAvatarLogo logoManualIg"><img src="images/holymake-logo-manual-compact.png" alt="Holymake"></div>
                   <div class="igMeta">
                     <div class="igName">Holymake 吼莉內容行銷</div>
                     <div class="igSub">社群觀察｜圖片待補</div>
@@ -357,6 +372,7 @@
               <div class="value"><b>可以帶給業務什麼？</b><span>讓客戶覺得你有在幫他注意到沒有想到和平常不會注意的事情。</span></div>
               <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>互動遊戲、社群內容優化、帳號定位調整。</span></div>
             </div>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
 
@@ -368,7 +384,7 @@
               <span class="previewLabel">IG 貼文預覽卡</span>
               <div class="igMockCard">
                 <div class="igTop">
-                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igAvatarLogo logoManualIg"><img src="images/holymake-logo-manual-compact.png" alt="Holymake"></div>
                   <div class="igMeta">
                     <div class="igName">Holymake 吼莉內容行銷</div>
                     <div class="igSub">時事分享｜圖片待補</div>
@@ -389,6 +405,7 @@
               <div class="value"><b>可以帶給業務什麼？</b><span>讓業務多一個自然、不尷尬的理由重新開啟對話。</span></div>
               <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>當月銷售活動規劃、短影音內容規劃、節慶檔期銷售內容。</span></div>
             </div>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
 
@@ -400,7 +417,7 @@
               <span class="previewLabel">IG 貼文預覽卡</span>
               <div class="igMockCard">
                 <div class="igTop">
-                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igAvatarLogo logoManualIg"><img src="images/holymake-logo-manual-compact.png" alt="Holymake"></div>
                   <div class="igMeta">
                     <div class="igName">Holymake 吼莉內容行銷</div>
                     <div class="igSub">個案紀錄｜貼文範例</div>
@@ -421,6 +438,7 @@
               <div class="value"><b>可以帶給業務什麼？</b><span>面對還在觀望的客戶時，可以用實際案例讓對方更安心。</span></div>
               <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>短影音一條龍、個人品牌內容規劃、服務特色整理。</span></div>
             </div>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
 
@@ -439,6 +457,7 @@
               <div class="value"><b>3. 讓下一次聯繫更有理由</b><span>有內容可以分享，就有更多機會重新開啟對話。不是硬問「最近要不要補貨」，而是用有幫助的內容先建立互動。</span></div>
               <div class="value"><b>4. 讓 Holymake 成為業務的支援工具</b><span>如果店家剛好需要短影音、社群內容或主題規劃，業務可以把 Holymake 當成一個可以協助客戶的後端資源。</span></div>
             </div>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
       </div>
@@ -449,22 +468,21 @@
         <details>
           <summary><span class="icon">S1</span>服務流程｜合作怎麼進行<span class="chev">＋</span></summary>
           <div class="panel">
-            <div class="servicePreview"><img src="images/service-flow.jpg" alt="Holymake 合作流程月曆範本"></div>
+            <div class="servicePreview"><img src="images/service-flow.jpg" alt="Holymake 合作流程月曆範本"></div><a class="downloadImgBtn" href="images/service-flow.jpg" download="Holymake_服務流程.jpg">下載這張服務流程圖</a>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
 
         <details>
           <summary><span class="icon">S2</span>服務方案｜可以怎麼選<span class="chev">＋</span></summary>
           <div class="panel">
-            <div class="servicePreview"><img src="images/service-plan.jpg" alt="Holymake 服務方案價目一覽"></div>
+            <div class="servicePreview"><img src="images/service-plan.jpg" alt="Holymake 服務方案價目一覽"></div><a class="downloadImgBtn" href="images/service-plan.jpg" download="Holymake_服務方案.jpg">下載這張服務方案圖</a>
+          <button class="panelClose" type="button">收合這個區塊</button>
           </div>
         </details>
       </div>
-
-      <a class="cta" href="#" onclick="window.print();return false;">下載 / 列印這份說明</a>
       <p class="footerNote">Holymake 吼莉內容行銷｜最有力量的行銷，就是你的日常生活。</p>
     </main>
-    <div class="bottomBar"></div>
   </section>
 <script>
   document.querySelectorAll('details').forEach((targetDetail) => {
@@ -473,6 +491,18 @@
         document.querySelectorAll('details').forEach((detail) => {
           if (detail !== targetDetail && detail.parentElement === targetDetail.parentElement) detail.open = false;
         });
+      }
+    });
+  });
+
+  document.querySelectorAll('.panelClose').forEach((button) => {
+    button.addEventListener('click', () => {
+      const detail = button.closest('details');
+      if (!detail) return;
+      const summary = detail.querySelector('summary');
+      detail.open = false;
+      if (summary) {
+        summary.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     });
   });
