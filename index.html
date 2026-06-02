@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Holymake 吼莉內容行銷｜業務月會說明</title>
+<style>
+  :root{
+    --bg:#dfe6dc;
+    --phone:#fffdf8;
+    --ink:#26372c;
+    --muted:#718072;
+    --sage:#dbe3d6;
+    --sage2:#eef2ea;
+    --green:#6f936e;
+    --deep:#26372c;
+    --orange:#db6014;
+    --orange2:#ff863b;
+    --line:#e9dfd2;
+    --shadow:0 28px 60px rgba(38,55,44,.22);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:radial-gradient(circle at top,#eef3ec 0%,var(--bg) 44%,#d7e0d5 100%);font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;color:var(--ink);display:flex;justify-content:center;align-items:flex-start;padding:38px 14px;}
+  .phone{width:min(430px,100%);background:var(--phone);border-radius:44px;box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(38,55,44,.08);position:relative;}
+  .notch{width:145px;height:28px;background:#090909;border-radius:0 0 18px 18px;margin:0 auto;}
+  .status{height:24px;display:flex;justify-content:space-between;align-items:center;padding:0 28px 0 30px;font-size:14px;font-weight:700;letter-spacing:.02em;margin-top:-22px;pointer-events:none;}
+  .signal{font-size:13px;opacity:.9;letter-spacing:1px}
+  main{padding:74px 24px 32px;}
+  .logoMark{width:44px;height:32px;margin:0 auto 8px;display:grid;place-items:center;color:var(--deep);font-size:28px;line-height:1;}
+  .brand{display:flex;align-items:center;justify-content:center;gap:5px;color:var(--orange);font-weight:900;letter-spacing:.01em;margin-bottom:18px;}\n  .brandLogo{gap:2px;}\n  .brandLogo .holy{font-family:Georgia,serif;font-style:italic;color:#db6014;font-size:26px;font-weight:700;letter-spacing:-.04em;}\n  .brandLogo .make{color:#ff863b;font-size:26px;font-weight:900;letter-spacing:-.05em;margin-left:-3px;}\n  .brandLogo .zh{color:#db6014;font-size:14px;font-weight:900;margin-left:6px;}
+  h1{font-size:29px;line-height:1.18;text-align:center;margin:0 0 12px;letter-spacing:-.04em;color:var(--deep);}
+  .subtitle{text-align:center;font-size:14px;line-height:1.75;color:var(--muted);margin:0 auto 28px;max-width:330px;}
+  .heroCard{background:linear-gradient(135deg,var(--sage2),#fff8f0);border:1px solid var(--line);border-radius:26px;padding:18px;margin-bottom:18px;}
+  .heroCard strong{display:block;font-size:17px;margin-bottom:8px;color:var(--deep)}
+  .heroCard p{margin:0;color:#5f6d61;font-size:14px;line-height:1.7;}
+  .quick{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:18px 0 24px;}
+  .quick div{background:#f3eee6;border:1px solid #eadccf;border-radius:18px;padding:12px 8px;text-align:center;}
+  .quick b{display:block;font-size:18px;color:var(--orange);line-height:1.1;margin-bottom:5px;}
+  .quick span{font-size:12px;color:#6e6257;}
+  .sectionTitle{font-size:13px;letter-spacing:.16em;color:var(--orange);font-weight:900;margin:28px 0 12px;text-transform:uppercase;}
+  .accordion{display:flex;flex-direction:column;gap:12px;}
+  details{background:var(--sage);border-radius:22px;border:1px solid rgba(38,55,44,.08);box-shadow:0 5px 12px rgba(38,55,44,.05);overflow:hidden;}
+  details[open]{background:#fff9f1;border-color:#ead8c8;}
+  summary{list-style:none;cursor:pointer;padding:18px 18px;display:flex;align-items:center;gap:13px;font-size:16px;font-weight:900;color:var(--deep);}
+  summary::-webkit-details-marker{display:none;}
+  .icon{width:34px;height:34px;border-radius:13px;background:#fffdf8;display:grid;place-items:center;color:var(--orange);font-size:13px;flex:0 0 auto;border:1px solid rgba(219,96,20,.16);font-weight:900;}
+  .chev{margin-left:auto;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.7);display:grid;place-items:center;font-size:18px;color:var(--muted);transition:.2s;}
+  details[open] .chev{transform:rotate(45deg);background:var(--orange);color:white;}
+  .panel{padding:0 18px 18px 65px;margin-top:-4px;}
+  .tag{display:inline-flex;align-items:center;border-radius:999px;background:#fff;border:1px solid #efd9c9;color:var(--orange);font-size:12px;font-weight:900;padding:5px 9px;margin:0 5px 8px 0;}
+  .block{border-left:3px solid var(--orange);padding-left:12px;margin:14px 0;}
+  .block h3{font-size:14px;margin:0 0 7px;color:#493a2c;}
+  .block p,.panel p{font-size:14px;line-height:1.7;margin:0 0 10px;color:#5b685d;}
+  .script{background:#fff;border:1px dashed #e6c8b3;border-radius:16px;padding:12px;margin:10px 0;color:#4d5b4f;font-size:14px;line-height:1.7;}
+  .script:before{content:"可以這樣分享";display:block;font-size:12px;color:var(--orange);font-weight:900;margin-bottom:5px;}
+  .valueGrid{display:grid;gap:10px;margin:12px 0;}
+  .value{background:#fff;border:1px solid #eee2d6;border-radius:18px;padding:13px;}
+  .value b{display:block;color:var(--deep);font-size:15px;margin-bottom:5px;}
+  .value span{font-size:13px;color:#667267;line-height:1.55;display:block;}
+
+
+  .servicePreview{background:#fff;border:1px solid #e7ded5;border-radius:22px;overflow:hidden;box-shadow:0 10px 24px rgba(53,47,41,.08);margin:12px 0;}
+  .servicePreview img{display:block;width:100%;height:auto;}
+
+  .servicePreview{margin-left:-48px;}
+  .servicePreview img{border-radius:20px;}
+  @media (max-width:380px){.servicePreview{margin-left:0;}}
+  .serviceNote{background:#fff3e8;border:1px solid #f0c8aa;border-radius:18px;padding:12px 13px;margin:10px 0 14px;font-size:13px;line-height:1.65;color:#5b4b3f;}
+  .serviceNote b{color:var(--orange);}
+  .serviceActions{display:grid;gap:8px;margin-top:10px;}
+  .serviceActions a{display:flex;align-items:center;justify-content:center;text-decoration:none;background:#fff;border:1px solid #eadccd;color:var(--orange);border-radius:18px;padding:12px 14px;font-size:14px;font-weight:900;}
+
+  .purposeLine{background:#fff3e8;border:1px solid #f0c8aa;border-left:5px solid var(--orange);border-radius:18px;padding:12px 13px;margin:8px 0 14px;box-shadow:0 8px 16px rgba(219,96,20,.08);}
+  .purposeLine small{display:block;color:var(--orange);font-size:11px;font-weight:900;letter-spacing:.08em;margin-bottom:4px;}
+  .purposeLine b{display:block;color:#3f2f25;font-size:15px;line-height:1.55;font-weight:900;}
+
+  .previewWrap{margin:12px 0 16px;}
+  .previewLabel{display:inline-block;font-size:12px;font-weight:900;color:var(--orange);margin-bottom:8px;letter-spacing:.04em;}
+  .igMockCard{background:#fff;border:1px solid #e7ded5;border-radius:22px;overflow:hidden;box-shadow:0 10px 24px rgba(53,47,41,.08);margin:6px 0 12px;}
+  .igTop{display:flex;align-items:center;gap:10px;padding:12px 13px;border-bottom:1px solid #f0e8df;}
+  .igAvatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#db6014,#ff863b);display:grid;place-items:center;color:white;font-weight:900;font-size:13px;}\n  .igAvatarLogo{width:48px;height:34px;border-radius:12px;background:#fff7ef;border:1px solid #f0c3a6;display:flex;align-items:center;justify-content:center;letter-spacing:-.04em;line-height:1;box-shadow:inset 0 0 0 1px rgba(219,96,20,.04);}\n  .igAvatarLogo .holy{font-family:Georgia,serif;font-style:italic;color:#db6014;font-size:13px;font-weight:700;}\n  .igAvatarLogo .make{color:#ff863b;font-size:13px;font-weight:900;margin-left:-1px;}
+  .igMeta{line-height:1.25;}
+  .igName{font-size:13px;font-weight:900;color:#26372c;}
+  .igSub{font-size:11px;color:#8b918a;}
+  .igMore{margin-left:auto;color:#777;font-weight:900;letter-spacing:2px;}
+  .igImageLink{display:block;background:#f8f1e9;}
+  .igImageLink img{display:block;width:100%;}
+  .igActions{display:flex;align-items:center;gap:14px;padding:10px 13px 4px;font-size:20px;color:#26372c;}
+  .igSave{margin-left:auto;}
+  .igCaption{padding:4px 13px 14px;font-size:13px;line-height:1.65;color:#4f5b51;}
+  .igCaption b{color:#26372c;}
+  .igViewBtn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;background:var(--orange);color:#fff;border:none;border-radius:18px;padding:12px 14px;font-size:14px;font-weight:900;margin:10px 0 4px;box-shadow:0 6px 14px rgba(219,96,20,.18);width:100%;}
+  .igViewBtn.disabled{background:#d8c7b8;color:#fff;box-shadow:none;}
+
+  .quizCard{background:linear-gradient(135deg,#fff8f0,#eef4ea);border:1px solid #eadccd;border-radius:26px;padding:18px;margin:12px 0 18px;box-shadow:0 10px 24px rgba(53,47,41,.07);}
+  .quizBadge{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #efd9c9;color:var(--orange);font-size:12px;font-weight:900;border-radius:999px;padding:6px 10px;margin-bottom:10px;}
+  .quizCard h2{font-size:22px;line-height:1.25;margin:0 0 8px;color:var(--deep);letter-spacing:-.03em;}
+  .quizCard p{font-size:14px;line-height:1.75;color:#5b685d;margin:0 0 12px;}
+  .quizLink{display:flex;align-items:center;justify-content:center;text-decoration:none;background:var(--orange);color:white;border-radius:18px;padding:13px 14px;font-size:15px;font-weight:900;margin:14px 0 0;box-shadow:0 8px 16px rgba(219,96,20,.18);}
+  .softList{display:grid;gap:8px;margin:10px 0;}
+  .softItem{background:#fff;border:1px solid #eee2d6;border-radius:16px;padding:11px 12px;font-size:13px;color:#5b685d;line-height:1.55;}
+  .softItem b{color:var(--deep);}
+  .mapGrid{display:grid;gap:8px;margin-top:10px;}
+  .mapItem{background:#fffdf8;border:1px solid #eee2d6;border-radius:16px;padding:11px 12px;font-size:13px;line-height:1.55;color:#5b685d;}
+  .mapItem b{display:block;color:var(--orange);margin-bottom:3px;}
+
+  .cta{display:block;text-decoration:none;text-align:center;background:var(--green);color:white;border-radius:22px;padding:15px 14px;font-size:16px;font-weight:900;margin:20px 0 10px;box-shadow:0 8px 16px rgba(111,147,110,.2);}
+  .footerNote{text-align:center;color:#788277;font-size:12px;line-height:1.7;padding:10px 18px 20px;}
+  .bottomBar{width:130px;height:5px;border-radius:10px;background:#a7a7a2;margin:6px auto 18px;}
+  @media (max-width:380px){main{padding-left:18px;padding-right:18px}.panel{padding-left:18px}summary{font-size:15px}.icon{display:none}.quick{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+  <section class="phone">
+    <div class="notch"></div>
+    <div class="status"><span>7:24</span><span class="signal">▮▮▮  Wi‑Fi  ▰</span></div>
+    <main>
+      <div class="logoMark">✦</div>
+      <div class="brand brandLogo"><span class="holy">Holy</span><span class="make">make</span><span class="zh">吼莉內容行銷</span></div>
+      <h1>把社群貼文<br>變成自然聊天的開門磚</h1>
+      <p class="subtitle">月會分享用｜一起看看 Holymake 的 IG 內容，如何成為和店家開話題、拉近關係、延伸需求的小幫手。</p>
+
+      <div class="heroCard">
+        <strong>這份資料想分享的一句話</strong>
+        <p>Holymake 貼文不只是拿來轉發，更可以成為「有理由找客戶聊天」的小工具。</p>
+      </div>
+
+      <div class="quick">
+        <div><b>開口</b><span>更自然破冰</span></div>
+        <div><b>延伸</b><span>帶出需求</span></div>
+        <div><b>成交</b><span>創造服務入口</span></div>
+      </div>
+
+      <div class="sectionTitle">Start Here</div>
+      <div class="accordion">
+        <details open>
+          <summary><span class="icon">◎</span>為什麼會有 Holymake？<span class="chev">＋</span></summary>
+          <div class="panel">
+            <p>Holymake 是從 RENATA 蕾娜塔髮品旗下的「短影音與社群內容規劃製作」延伸出來的社群內容服務。</p>
+            <div class="block"><h3>不是另外多一個帳號而已</h3><p>它是幫業務、髮廊客戶、想經營社群的人，提供更低門檻的內容靈感與品牌經營方向。</p></div>
+            <div class="valueGrid"><div class="value"><b>對業務的價值</b><span>多一個能與店家討論社群、銷售、品牌形象的切入點。</span></div><div class="value"><b>對店家的價值</b><span>不用再從零想主題，能看見「自己的日常也能變內容」。</span></div></div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="icon">☑</span>分享給業務的使用小提醒<span class="chev">＋</span></summary>
+          <div class="panel">
+            <div class="tag">不用急著推</div><div class="tag">不要只像傳單</div><div class="tag">先聊出需求</div>
+            <p>每篇貼文可以這樣輕鬆運用：先丟一個客戶可能有感的觀察，再接一句「你們店裡會不會也遇到？」</p>
+            <div class="script">老師，這篇我覺得你們店也會用得到。不是叫你現在一定要拍影片，而是你可以先看看，這個主題其實很適合拿來跟客人溝通。</div>
+            <div class="block"><h3>可以參考的三個小步驟</h3><p>先分享貼文 → 輕輕問店家有沒有遇到 → 如果對方有興趣，再延伸到社群內容、短影音或活動規劃。</p></div>
+          </div>
+        </details>
+      </div>
+
+
+      <div class="sectionTitle">Before Sharing</div>
+      <div class="accordion">
+        <details open>
+          <summary><span class="icon">★</span>先從社群吸客體質小測驗開始<span class="chev">＋</span></summary>
+          <div class="panel">
+            <div class="quizCard">
+              <span class="quizBadge">互動入口｜先玩再聊</span>
+              <h2>測驗負責打開話題，貼文負責延伸討論。</h2>
+              <p>在分享 Holymake 的社群貼文前，可以先用這個小測驗，讓店家快速看見自己的社群狀態。它不是要評分高低，而是讓業務多一個輕鬆、自然、不尷尬的開場。</p>
+              <a class="quizLink" href="https://yourvideowe.github.io/renata-holymake-app/" target="_blank" rel="noopener">開始玩社群吸客體質測驗</a>
+            </div>
+
+            <div class="block"><h3>這個測驗可以先幫業務知道什麼？</h3></div>
+            <div class="softList">
+              <div class="softItem"><b>1. 店家目前容易吸引哪一種客人</b><br>先看見店家的客群輪廓，後面比較好聊服務與產品搭配。</div>
+              <div class="softItem"><b>2. 店家適合拍什麼類型內容</b><br>不用一開始就問「你想拍什麼」，而是從測驗結果延伸。</div>
+              <div class="softItem"><b>3. 哪些髮品或服務比較容易自然推薦</b><br>把產品銷售放進店家的內容脈絡裡，而不是突然硬推。</div>
+              <div class="softItem"><b>4. 後續可以接哪一類 Holymake 貼文</b><br>測驗只是開頭，貼文才是讓對話繼續下去的素材。</div>
+            </div>
+
+            <div class="script">老師，這個小測驗可以測看看你們店現在比較容易吸引哪一種客人。測完結果不一定要很認真，但可以當作我們下次討論社群內容或產品搭配的參考。</div>
+
+            <div class="block"><h3>測完之後，可以接這三句</h3></div>
+            <div class="softList">
+              <div class="softItem">你覺得這個結果像你們店嗎？</div>
+              <div class="softItem">你現在吸引到的客人，是不是你想要的客人？</div>
+              <div class="softItem">如果要讓客人更懂你的服務，你覺得哪一類內容最適合先做？</div>
+            </div>
+
+            <div class="block"><h3>測驗結果可以怎麼接到社群主題？</h3></div>
+            <div class="mapGrid">
+              <div class="mapItem"><b>不知道適合發什麼</b>可以接「主題規劃」，一起整理每月內容方向。</div>
+              <div class="mapItem"><b>有發文，但內容方向不太穩</b>可以接「社群觀察」，看看帳號是否受到平台變動或內容單一影響。</div>
+              <div class="mapItem"><b>想推產品，但怕太業配</b>可以接「發文注意事項」，討論產品推薦、功效文與銷售內容怎麼說比較安心。</div>
+              <div class="mapItem"><b>想用新工具提升效率</b>可以接「AI 運用」，聊 AI 如何做售後服務與髮型溝通輔助。</div>
+              <div class="mapItem"><b>還不清楚 Holymake 是什麼</b>可以接「品牌介紹」，讓對方知道這是 RENATA 延伸出的內容支援。</div>
+              <div class="mapItem"><b>對短影音效果還在觀望</b>可以接「個案紀錄」，用實際案例降低不安。</div>
+              <div class="mapItem"><b>想做活動或跟上話題</b>可以接「時事分享」，延伸到當月銷售活動與短影音內容規劃。</div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div class="sectionTitle">Content Series 系列主題</div>
+      <div class="accordion">
+        
+        <details>
+          <summary><span class="icon">01</span>品牌介紹｜先講清楚我們是誰<span class="chev">＋</span></summary>
+          <div class="panel">
+            <div class="purposeLine"><small>這個主題可以怎麼用</small><b>介紹 Holymake 時，可以把它當成店家經營社群時多一個可以運用的支援資源。</b></div>
+            <div class="previewWrap">
+              <span class="previewLabel">IG 貼文預覽卡</span>
+              <div class="igMockCard">
+                <div class="igTop">
+                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igMeta">
+                    <div class="igName">Holymake 吼莉內容行銷</div>
+                    <div class="igSub">品牌介紹｜貼文範例</div>
+                  </div>
+                  <div class="igMore">•••</div>
+                </div>
+                <a class="igImageLink" href="https://www.instagram.com/p/DY1fRQWj1Xk/?img_index=1" target="_blank" rel="noopener">
+                  <img src="images/brand-cover.jpg" alt="品牌介紹｜先講清楚我們是誰">
+                </a>
+                <div class="igActions"><span>♡</span><span>💬</span><span>↗</span><span class="igSave">▱</span></div>
+                <div class="igCaption"><b>holymake.tw</b> 我們不是單純拍片，而是把品牌的日常整理成能被看見、被理解、被記住的內容。</div>
+              </div>
+              <a class="igViewBtn" href="https://www.instagram.com/p/DY1fRQWj1Xk/?img_index=1" target="_blank" rel="noopener">前往 Instagram 查看完整貼文</a>
+            </div>
+            <div class="block"><h3>這篇可以協助什麼？</h3><p>適合第一次介紹 Holymake，或客戶問「你們現在是在做什麼服務？」的時候。</p></div>
+            <div class="script">老師，這是我們 RENATA 旗下延伸出來的內容服務。因為很多店家都有社群經營需求，所以我們不只是提供髮品，也想協助你們把品牌跟服務被更多人看見。</div>
+            <div class="valueGrid">
+              <div class="value"><b>可以帶給業務什麼？</b><span>把銷售對話從「產品」升級到「店家經營」。</span></div>
+              <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>社群健檢、短影音服務說明、店家內容規劃。</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="icon">02</span>AI 運用｜用低門檻工具吸引客戶<span class="chev">＋</span></summary>
+          <div class="panel">
+            <div class="purposeLine"><small>這個主題可以怎麼用</small><b>用低門檻、有新鮮感的 AI 話題，自然聊到售後服務、髮型溝通與內容效率。</b></div>
+            <div class="previewWrap">
+              <span class="previewLabel">IG 貼文預覽卡</span>
+              <div class="igMockCard">
+                <div class="igTop">
+                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igMeta">
+                    <div class="igName">Holymake 吼莉內容行銷</div>
+                    <div class="igSub">AI 運用｜貼文範例</div>
+                  </div>
+                  <div class="igMore">•••</div>
+                </div>
+                <a class="igImageLink" href="https://www.instagram.com/p/DY1neurID4S/?img_index=1" target="_blank" rel="noopener">
+                  <img src="images/ai-cover.jpg" alt="AI 運用｜用低門檻工具吸引客戶">
+                </a>
+                <div class="igActions"><span>♡</span><span>💬</span><span>↗</span><span class="igSave">▱</span></div>
+                <div class="igCaption"><b>holymake.tw</b> 把 AI 當成輔助工具，不是取代專業判斷。讓美髮師更容易整理髮型溝通與社群內容方向。</div>
+              </div>
+              <a class="igViewBtn" href="https://www.instagram.com/p/DY1neurID4S/?img_index=1" target="_blank" rel="noopener">前往 Instagram 查看完整貼文</a>
+            </div>
+            <div class="block"><h3>這篇可以協助什麼？</h3><p>適合想經營社群但覺得麻煩，或常遇到客人拿 AI 圖溝通髮型的店家。</p></div>
+            <div class="script">現在很多 AI 內容，這篇不是叫你全部交給 AI，而是先用 AI 整理方向，再修成像你自己的語氣跟店裡內容。懂用 AI，也比較不怕客人拿 AI 圖來溝通髮型。</div>
+            <div class="valueGrid">
+              <div class="value"><b>可以帶給業務什麼？</b><span>用輕鬆、熱門、低門檻的工具打開話題。</span></div>
+              <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>AI 指令包、LINE@ 導流、AI 主題短影音規劃、運用 AI 做售後服務、髮型溝通「輔助」。</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="icon">03</span>發文注意事項｜用風險提醒建立信任<span class="chev">＋</span></summary>
+          <div class="panel">
+            <div class="purposeLine"><small>這個主題可以怎麼用</small><b>用發文風險提醒建立信任，讓店家感覺你不只是介紹產品，也有幫他留意可能踩雷的地方。</b></div>
+            <div class="previewWrap">
+              <span class="previewLabel">IG 貼文預覽卡</span>
+              <div class="igMockCard">
+                <div class="igTop">
+                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igMeta">
+                    <div class="igName">Holymake 吼莉內容行銷</div>
+                    <div class="igSub">發文注意事項｜貼文範例</div>
+                  </div>
+                  <div class="igMore">•••</div>
+                </div>
+                <a class="igImageLink" href="https://www.instagram.com/p/DY4H5Daj7b3/?img_index=1" target="_blank" rel="noopener">
+                  <img src="images/rules-cover.jpg" alt="發文注意事項｜用風險提醒建立信任">
+                </a>
+                <div class="igActions"><span>♡</span><span>💬</span><span>↗</span><span class="igSave">▱</span></div>
+                <div class="igCaption"><b>holymake.tw</b> 社群與廣告不能只追求吸睛。字眼、效果描述、前後對比、客戶見證都要更謹慎。</div>
+              </div>
+              <a class="igViewBtn" href="https://www.instagram.com/p/DY4H5Daj7b3/?img_index=1" target="_blank" rel="noopener">前往 Instagram 查看完整貼文</a>
+            </div>
+            <div class="block"><h3>這篇可以協助什麼？</h3><p>適合有發產品、推薦、發功效文，或還不熟悉法規風險的店家。</p></div>
+            <div class="script">這篇給你參考，現在做社群或廣告不是只要吸睛就好。有些字眼、效果描述、前後對比、客戶見證都要注意，尤其之後如果有投廣告，更要先把方向抓穩。</div>
+            <div class="valueGrid">
+              <div class="value"><b>可以帶給業務什麼？</b><span>讓業務不只是介紹產品，也能用提醒風險的方式建立信任感。</span></div>
+              <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>一條龍短影音、社群內容製作、廣告前內容檢查。</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="icon">04</span>主題規劃｜解決不知道拍什麼<span class="chev">＋</span></summary>
+          <div class="panel">
+            <div class="purposeLine"><small>這個主題可以怎麼用</small><b>協助店家從「不知道發什麼」，慢慢整理出每個月都可以經營的主題方向。</b></div>
+            <div class="previewWrap">
+              <span class="previewLabel">IG 貼文預覽卡</span>
+              <div class="igMockCard">
+                <div class="igTop">
+                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igMeta">
+                    <div class="igName">Holymake 吼莉內容行銷</div>
+                    <div class="igSub">主題規劃｜貼文範例</div>
+                  </div>
+                  <div class="igMore">•••</div>
+                </div>
+                <a class="igImageLink" href="https://www.instagram.com/p/DY6eTZNIFHE/?img_index=1" target="_blank" rel="noopener">
+                  <img src="images/calendar-cover.jpg" alt="主題規劃｜解決不知道拍什麼">
+                </a>
+                <div class="igActions"><span>♡</span><span>💬</span><span>↗</span><span class="igSave">▱</span></div>
+                <div class="igCaption"><b>holymake.tw</b> 把節慶、天象、生活提案，變成每個月都能延伸的內容地圖。</div>
+              </div>
+              <a class="igViewBtn" href="https://www.instagram.com/p/DY6eTZNIFHE/?img_index=1" target="_blank" rel="noopener">前往 Instagram 查看完整貼文</a>
+            </div>
+            <div class="block"><h3>這篇可以協助什麼？</h3><p>適合有經營意願，但每次都卡在不知道發什麼，不知道怎麼一致性經營主題的人。</p></div>
+            <div class="script">老師你們做 IG 想主題會很難嗎？這篇給你參考，我們開始每個月整理重點，也有一些小乾貨。不是每個節日都要跟，而是讓你看到每個月其實都有很多內容可以延伸。</div>
+            <div class="valueGrid">
+              <div class="value"><b>可以帶給業務什麼？</b><span>很適合從自然聊天，延伸到店家的內容規劃需求。</span></div>
+              <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>當月內容企劃、檔期產品銷售活動、專屬主題月曆。</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="icon">05</span>社群觀察｜提醒帳號問題<span class="chev">＋</span></summary>
+          <div class="panel">
+            <div class="purposeLine"><small>這個主題可以怎麼用</small><b>分享店家平常不一定會注意到的社群變化，讓對方感覺你有在幫他留意市場動態。</b></div>
+            <div class="previewWrap">
+              <span class="previewLabel">IG 貼文預覽卡</span>
+              <div class="igMockCard">
+                <div class="igTop">
+                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igMeta">
+                    <div class="igName">Holymake 吼莉內容行銷</div>
+                    <div class="igSub">社群觀察｜圖片待補</div>
+                  </div>
+                  <div class="igMore">•••</div>
+                </div>
+                <a class="igImageLink" href="#" target="_self" rel="noopener">
+                  <img src="images/observation-cover.jpg" alt="社群觀察｜提醒帳號問題">
+                </a>
+                <div class="igActions"><span>♡</span><span>💬</span><span>↗</span><span class="igSave">▱</span></div>
+                <div class="igCaption"><b>holymake.tw</b> 提醒店家：客人現在不只看作品，也看個性、服務過程、溝通方式與專業感。</div>
+              </div>
+              <button class="igViewBtn disabled" disabled>IG 連結待補</button>
+            </div>
+            <div class="block"><h3>這篇可以協助什麼？</h3><p>適合有在發文，或只固定發作品照的店家。</p></div>
+            <div class="script">老師你們最近有發生這些事嗎？這些社群上最近在變動，你們可能也看看自己的帳號有沒有被影響，如果有或沒有都可以看看遇到了要怎麼應對比較好的參考。</div>
+            <div class="valueGrid">
+              <div class="value"><b>可以帶給業務什麼？</b><span>讓客戶覺得你有在幫他注意到沒有想到和平常不會注意的事情。</span></div>
+              <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>互動遊戲、社群內容優化、帳號定位調整。</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="icon">06</span>時事分享｜用熱門話題自然破冰<span class="chev">＋</span></summary>
+          <div class="panel">
+            <div class="purposeLine"><small>這個主題可以怎麼用</small><b>用時事與節慶話題輕鬆破冰，再自然延伸到活動、產品與短影音內容規劃。</b></div>
+            <div class="previewWrap">
+              <span class="previewLabel">IG 貼文預覽卡</span>
+              <div class="igMockCard">
+                <div class="igTop">
+                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igMeta">
+                    <div class="igName">Holymake 吼莉內容行銷</div>
+                    <div class="igSub">時事分享｜圖片待補</div>
+                  </div>
+                  <div class="igMore">•••</div>
+                </div>
+                <a class="igImageLink" href="#" target="_self" rel="noopener">
+                  <img src="images/trend-cover.jpg" alt="時事分享｜用熱門話題自然破冰">
+                </a>
+                <div class="igActions"><span>♡</span><span>💬</span><span>↗</span><span class="igSave">▱</span></div>
+                <div class="igCaption"><b>holymake.tw</b> 把大家正在注意的話題，轉成店裡能說的服務、活動或觀點。</div>
+              </div>
+              <button class="igViewBtn disabled" disabled>IG 連結待補</button>
+            </div>
+            <div class="block"><h3>這篇可以協助什麼？</h3><p>適合平常比較難開口、但可以用熱門話題輕鬆破冰的客戶。</p></div>
+            <div class="script">最近這個話題蠻多人在討論，我覺得其實也可以轉成店裡的內容。不是硬跟風，而是用大家正在注意的事情，帶出你們店的服務或觀點。</div>
+            <div class="valueGrid">
+              <div class="value"><b>可以帶給業務什麼？</b><span>讓業務多一個自然、不尷尬的理由重新開啟對話。</span></div>
+              <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>當月銷售活動規劃、短影音內容規劃、節慶檔期銷售內容。</span></div>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="icon">07</span>個案紀錄｜用成果降低懷疑<span class="chev">＋</span></summary>
+          <div class="panel">
+            <div class="purposeLine"><small>這個主題可以怎麼用</small><b>用實際成果降低客戶懷疑，讓店家看見短影音與社群內容是可以被規劃出效果的。</b></div>
+            <div class="previewWrap">
+              <span class="previewLabel">IG 貼文預覽卡</span>
+              <div class="igMockCard">
+                <div class="igTop">
+                  <div class="igAvatarLogo"><span class="holy">Holy</span><span class="make">make</span></div>
+                  <div class="igMeta">
+                    <div class="igName">Holymake 吼莉內容行銷</div>
+                    <div class="igSub">個案紀錄｜貼文範例</div>
+                  </div>
+                  <div class="igMore">•••</div>
+                </div>
+                <a class="igImageLink" href="#" target="_self" rel="noopener">
+                  <img src="images/case-cover.jpg" alt="個案紀錄｜用成果降低懷疑">
+                </a>
+                <div class="igActions"><span>♡</span><span>💬</span><span>↗</span><span class="igSave">▱</span></div>
+                <div class="igCaption"><b>holymake.tw</b> 三天增加 300 粉絲、影片衝到 5 萬，不是靠公式，是靠找到自己的內容特色。</div>
+              </div>
+              <button class="igViewBtn disabled" disabled>IG 連結待補</button>
+            </div>
+            <div class="block"><h3>這篇可以協助什麼？</h3><p>適合觀望型客戶，尤其是覺得「拍短影音真的有用嗎？」的人。</p></div>
+            <div class="script">老師，這篇你可以看一下，它不是單純拍好看的影片，而是把一個人的服務特色整理出來，讓客人比較容易記得你。</div>
+            <div class="valueGrid">
+              <div class="value"><b>可以帶給業務什麼？</b><span>面對還在觀望的客戶時，可以用實際案例讓對方更安心。</span></div>
+              <div class="value"><b>如果對方有興趣，可以再聊什麼？</b><span>短影音一條龍、個人品牌內容規劃、服務特色整理。</span></div>
+            </div>
+          </div>
+        </details>
+
+      </div>
+
+
+      <div class="sectionTitle">Sales Flow</div>
+      <div class="accordion">
+        <details>
+          <summary><span class="icon">$</span>這些內容，可以幫業務什麼？<span class="chev">＋</span></summary>
+          <div class="panel">
+            <p>真正的價值，不只是多一篇貼文可以轉發，而是讓業務多一個自然關心客戶、延伸需求、創造合作機會的話題入口。</p>
+            <div class="valueGrid">
+              <div class="value"><b>1. 讓客戶感覺你有在幫他想</b><span>不是只有產品、價格、活動，而是也會分享店家經營社群、溝通客人、規劃內容時可能用得到的資訊。</span></div>
+              <div class="value"><b>2. 讓產品銷售變得更自然</b><span>當客戶正在思考檔期活動、服務推廣、社群內容時，業務就能更自然地帶出適合的產品、課程或活動規劃。</span></div>
+              <div class="value"><b>3. 讓下一次聯繫更有理由</b><span>有內容可以分享，就有更多機會重新開啟對話。不是硬問「最近要不要補貨」，而是用有幫助的內容先建立互動。</span></div>
+              <div class="value"><b>4. 讓 Holymake 成為業務的支援工具</b><span>如果店家剛好需要短影音、社群內容或主題規劃，業務可以把 Holymake 當成一個可以協助客戶的後端資源。</span></div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+
+      <div class="sectionTitle">Service Support 服務支援</div>
+      <div class="accordion">
+        <details>
+          <summary><span class="icon">S1</span>服務流程｜合作怎麼進行<span class="chev">＋</span></summary>
+          <div class="panel">
+            <div class="servicePreview"><img src="images/service-flow.jpg" alt="Holymake 合作流程月曆範本"></div>
+          </div>
+        </details>
+
+        <details>
+          <summary><span class="icon">S2</span>服務方案｜可以怎麼選<span class="chev">＋</span></summary>
+          <div class="panel">
+            <div class="servicePreview"><img src="images/service-plan.jpg" alt="Holymake 服務方案價目一覽"></div>
+          </div>
+        </details>
+      </div>
+
+      <a class="cta" href="#" onclick="window.print();return false;">下載 / 列印這份說明</a>
+      <p class="footerNote">Holymake 吼莉內容行銷｜最有力量的行銷，就是你的日常生活。</p>
+    </main>
+    <div class="bottomBar"></div>
+  </section>
+<script>
+  document.querySelectorAll('details').forEach((targetDetail) => {
+    targetDetail.addEventListener('toggle', () => {
+      if (targetDetail.open) {
+        document.querySelectorAll('details').forEach((detail) => {
+          if (detail !== targetDetail && detail.parentElement === targetDetail.parentElement) detail.open = false;
+        });
+      }
+    });
+  });
+</script>
+</body>
+</html>
